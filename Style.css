@@ -19,15 +19,15 @@ body
 }   
 
 .Map{
-    margin-left: 20%;
+    margin-left: 40%;
 }
 
 .parcel{
-    margin-left:20%;
+    margin-left:40%;
 }
 
 .robotpic{
-    margin-left:20%;
+    margin-left:40%;
 }
 
 .divNho{
@@ -42,12 +42,11 @@ body
 }
 
 .text{
-    font-size: 0.7cm;
+    font-size: 0.5cm;
     
 
 }
 
 .parcel{
-    margin-left:40%;
 
 }
