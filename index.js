@@ -43,11 +43,18 @@
   
         let outer = (window.__sandbox ? window.__sandbox.output.div : document.body), doc = outer.ownerDocument
         this.node = outer.appendChild(doc.createElement("div"))
+        this.node.className="hinh"
         this.node.style.cssText = "position: relative; line-height: 0.1; margin-left: 10px"
+      
+
+
         this.map = this.node.appendChild(doc.createElement("img"))
         this.map.src = "./village2x.png"
         this.map.style.cssText = "vertical-align: -8px"
         this.robotElt = this.node.appendChild(doc.createElement("div"))
+
+
+
         this.robotElt.style.cssText = `position: absolute; transition: left ${0.8 / speed}s, top ${0.8 / speed}s;`
         let robotPic = this.robotElt.appendChild(doc.createElement("img"))
 
