@@ -1,33 +1,13 @@
-#Header1
+#Header
 {
+    text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 80%;
-    background-color:#86c200;
-    border-style: solid;
+    color:limegreen;
+    font-size: 450%;
+    background-color: transparent;
     height: auto;
     width: auto;
-    padding: 1%;
-}
-
-#Header2
-{
-    display: flex; 
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-between;
-}
-
-#Footer
-{
-    background-color:#86c200;
-    border-style: solid;
-    height: auto;
-    width: auto;
-}
-
-h1 
-{
-    font-size: 2.5rem;
+    padding:1%;
 }
 
 body
@@ -35,77 +15,35 @@ body
     justify-content: center;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: white;
     background-image: url('./background.png');
+}   
+
+.Map{
+    margin-left: 20%;
 }
 
-.box-content
-{
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(3, 1fr);
+.parcel{
+    margin-left:20%;
 }
 
-.visual 
-{
-    height: 100px;
-    width: 100%;
-    background: wheat;
-    margin: 0.5rem 0;
-}
-  
-.Tree
-{
-    
-    display: flex;
-    flex-direction: row;
-    background: #e0e0e0;
-    padding: 1rem;
-    font-size: 150%;
+.robotpic{
+    margin-left:20%;
 }
 
-.img1
-{
-    height: 300px; 
-    width: 300px;
-    border-style: solid;
-    margin: 2%;
-}
-
-.img2
-{
-    height: auto; 
-    width: auto;
-    margin: 2%;
-}
-
-.text-content
-{
-    margin-left: auto;
-}
-
-.GioHang
-{
-    border-style: dotted;
-    text-align: center;
-    background-color: #86c200;
-    color: white;
-}
-
-.hinh{
-    
-}
 .divNho{
     margin-left: 40%;
 }
 
 .map{
+    border: black;
+    border-style: solid;
     margin-left: 40%;
 
 }
 
 .text{
-    margin-left: 40%;
+    font-size: 0.7cm;
+    
 
 }
 
