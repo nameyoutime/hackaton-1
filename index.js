@@ -44,7 +44,7 @@
         let outer = (window.__sandbox ? window.__sandbox.output.div : document.body), doc = outer.ownerDocument
         this.node = outer.appendChild(doc.createElement("div"))
         this.node.className="hinh"
-        this.node.style.cssText = "position: relative; line-height: 0.1; margin-left: 10px;transform:scale(2); margin-top:100px"
+        this.node.style.cssText = "position: relative; line-height: 0.1; margin-left: 10px; transform:scale(2.5); margin-top:100px"
       
 
 
