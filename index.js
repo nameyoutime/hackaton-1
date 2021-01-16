@@ -8,27 +8,27 @@
 
         //11 dia diem
         //A
-      "Alice's House": {x: 370, y: 192},
+      "A": {x: 370, y: 192},
       //B
-      "Bob's House": {x: 280, y: 203},
+      "B": {x: 280, y: 203},
       //C
-      "Cabin": {x: 172, y: 207},
+      "C": {x: 172, y: 207},
       //D
-      "Daria's House": {x: 215, y: 99},
+      "D": {x: 215, y: 99},
       //E
-      "Ernie's House": {x: 142, y: 117},
+      "E": {x: 142, y: 117},
       //F
-      "Farm": {x: 60, y: 140},
+      "F": {x: 60, y: 140},
       //G
-      "Grete's House": {x: 91, y: 103},
+      "G": {x: 91, y: 103},
       //h
-      "Marketplace": {x: 22, y: 226},
+      "H": {x: 22, y: 226},
       //I
-      "Post Office": {x: 393, y: 228},
+      "I": {x: 393, y: 228},
       //j
-      "Shop": {x: 92, y: 100},
+      "J": {x: 92, y: 100},
       //K
-      "Town Hall": {x: 275, y: 99}
+      "K": {x: 275, y: 99}
     }
     const placeKeys = Object.keys(places)
   
@@ -143,23 +143,23 @@
     }
   })()
   var roads = [
-      "Alice's House-Bob's House",   "Alice's House-Grete's House",
-      "Alice's House-Post Office",
+      "A-B",   "A-G",
+      "A-I",
       
       
-      "Bob's House-Post Office",
-      "Bob's House-Cabin","Bob's House-Grete's House",
+      "B-I",
+      "B-C","B-G",
       
-      "Cabin-Marketplace","Cabin-Daria's House",
-      "Cabin-Ernie's House","Cabin-Farm","Cabin-Shop",
+      "C-H","C-D",
+      "C-E","C-F","C-J",
 
-      "Daria's House-Ernie's House",
+      "D-E",
 
-      "Ernie's House-Shop", "Ernie's House-Farm",
+      "E-J", "E-F",
 
-      "Shop-Farm",
+      "J-F",
 
-      "Town Hall-Grete's House"
+      "K-G"
       
     ];
     
@@ -232,14 +232,14 @@
         } while (place == address);
         parcels.push({place, address});
       }
-      return new VillageState("Post Office", parcels);
+      return new VillageState("I", parcels);
     };
     
     var mailRoute = [
-      "Alice's House", "Cabin", "Alice's House", "Bob's House",
-      "Town Hall", "Daria's House", "Ernie's House",
-      "Grete's House", "Shop", "Grete's House", "Farm",
-      "Marketplace", "Post Office"
+      "A", "C", "A", "B",
+      "K", "D", "E",
+      "G", "J", "G", "F",
+      "H", "I"
     ];
     
     function routeRobot(state, memory) {
