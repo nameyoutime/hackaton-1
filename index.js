@@ -50,19 +50,27 @@
 
         this.map = this.node.appendChild(doc.createElement("img"))
         this.map.src = "./village2x.png"
+        this.map.className="map"
+
+
         this.map.style.cssText = "vertical-align: -8px"
         this.robotElt = this.node.appendChild(doc.createElement("div"))
-
+        this.robotElt.className= "div2"
 
 
         this.robotElt.style.cssText = `position: absolute; transition: left ${0.8 / speed}s, top ${0.8 / speed}s;`
         let robotPic = this.robotElt.appendChild(doc.createElement("img"))
+        
 
+        this.robotElt.className = "divNho"
         //robot moving
         robotPic.src = "./robot_moving2x.gif"
         this.parcels = []
   
         this.text = this.node.appendChild(doc.createElement("span"))
+        this.text.className="text"
+
+
         this.button = this.node.appendChild(doc.createElement("button"))
         this.button.style.cssText = "color: white; background: #28b; border: none; border-radius: 2px; padding: 2px 5px; line-height: 1.1; font-family: sans-serif; font-size: 80%"
         this.button.textContent = "Stop"
@@ -93,6 +101,8 @@
           heights[place] += 14
           let node = document.createElement("div")
           let offset = placeKeys.indexOf(address) * 16
+
+          node.className = "parcel"
           node.style.cssText = "position: absolute; height: 16px; width: 16px; background-image: url(./parcel2x.png); background-position: 0 -" + offset + "px";
           if (place == this.worldState.place) {
             node.style.left = "25px"
