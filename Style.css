@@ -9,13 +9,15 @@
     width: auto;
     padding:1%;
 }
-
+#nhanvat{
+    width: 200px;
+    text-align: center;
+}
 body
 {
     justify-content: center;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    height: 100%;
     background-image: url('./background.png');
 }   
 

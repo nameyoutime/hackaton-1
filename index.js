@@ -1,3 +1,34 @@
+let chonNV = document.getElementById("chonNv");
+let hinhNv = [{hinh: "./Nv/1.gif"},
+{hinh:"./Nv/3.gif"},{hinh:"./Nv/2.gif"}];
+let temp;
+let checkFrame=false;
+
+for(let i of hinhNv){
+
+  let div = document.createElement("div");
+  let btnImg=document.createElement("img");
+  btnImg.id="nhanVat";
+
+  btnImg.src=i.hinh;
+  btnImg.width="200px";
+  btnImg.onclick=()=>{
+    temp=i.hinh;
+    if(checkFrame==false){
+      runRobotAnimation(VillageState.random(), lazyRobot, []);
+      checkFrame=true;
+    }
+    else{
+      document.getElementById("hinh").remove();
+      runRobotAnimation(VillageState.random(), lazyRobot, []);
+      checkFrame=true;
+
+    }
+  }
+  div.appendChild(btnImg);
+  chonNV.appendChild(div);
+}
+
 (function() {
     "use strict"
   
@@ -43,7 +74,7 @@
   
         let outer = (window.__sandbox ? window.__sandbox.output.div : document.body), doc = outer.ownerDocument
         this.node = outer.appendChild(doc.createElement("div"))
-        this.node.className="hinh"
+        this.node.id="hinh"
         this.node.style.cssText = "position: relative; line-height: 0.1; margin-left: 10px; transform:scale(2.5); margin-top:100px"
       
 
@@ -64,7 +95,9 @@
 
         this.robotElt.className = "divNho"
         //robot moving
-        robotPic.src = "./robot_moving2x.gif"
+        
+        robotPic.src = temp;
+        robotPic.style.width="60px"
         this.parcels = []
   
         this.text = this.node.appendChild(doc.createElement("span"))
@@ -129,7 +162,7 @@
           this.text.textContent = ` Finished after ${this.turn} turns`
           
           //robot stop
-          this.robotElt.firstChild.src = "./robot_idle2x.png"
+          this.robotElt.firstChild.src = temp
         } else {
           this.schedule()
         }
@@ -316,4 +349,3 @@
       return {direction: route[0], memory: route.slice(1)};
     }
     
-    runRobotAnimation(VillageState.random(), lazyRobot, []);
