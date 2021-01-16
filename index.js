@@ -203,13 +203,14 @@ for(let i of hinhNv){
       "C-H","C-D",
       "C-E","C-F","C-J",
 
-      // "D-E",
+      "D-E",
 
-      // "E-J", "E-F",
+      "E-J"
+      , "E-F",
 
-      // "J-F",
+      "J-F",
 
-      // "K-G"
+      "K-G"
       
     ];
     
